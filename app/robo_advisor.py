@@ -123,18 +123,26 @@ def dolval(valueinput):
     return "{0:,.2f}".format(valueinput)
 #Shoutout Professor Rossetti for the formatting here @s2t2
 
+#calculates the closing, high, and low prices
 recclose = (float(output.iloc[0]["Close"]))
 reclow = (float(min((output["Low"]))))
 rechigh = (float(max((output["High"]))))
 
+#redundant series of code that I ended up not removing, but initially had caused problems
+#i believe it was because in an earlier iteration of the code conditions for the recommendation were having some concatenation problem
+
 cclose = float(output.iloc[0]["Close"])
 llow = float(min((output["Low"])))
 hhigh = float(max((output["High"])))
+
+#variables used in conditions for recommendatioin
 lbound = float(0.75)
 hbound = float(1.66)
 
 lb2 = (lbound * cclose)
 hb2 = (hbound * cclose)
+
+#if statement to create recommendation for whether to buy or not
 if llow < lb2 or hhigh > hb2:
     recom = "DO NOT BUY"
     logic = "This stock appears to be very volatile! Unless Jerome Powell is fooling around with interest rates again and causing market-wide turmoil, its best to stay away from this stock for now as it is probably not a bluechip stock!"
@@ -142,6 +150,8 @@ else:
     recom = "BUY"
     logic = "This stock does not seem very volatile! You have a high probability of making a profit if you write calls and puts on this company!"
 
+
+#prints relevant information, prints recommendations
 print("LATEST DAILY CLOSING PRICE: $" + dolval(recclose))
 
 print("THE 100-DAY LOW IS : $" + dolval(reclow))
@@ -162,6 +172,13 @@ print("")
 print("Thank you for using The Bluechip Stock Picker!")
 
 print("--------------------------------------------------- ")
+
+
+
+
+
+
+
 
 
 
