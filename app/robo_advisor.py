@@ -122,3 +122,6 @@ print("")
 def dolval(valueinput):
     return "{0:,.2f}".format(valueinput)
 #Shoutout Professor Rossetti for the formatting here @s2t2
+recclose = (float(output.iloc[0]["Close"]))
+reclow = (float(min((output["Low"]))))
+rechigh = (float(max((output["High"]))))
