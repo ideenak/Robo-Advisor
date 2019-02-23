@@ -41,3 +41,41 @@ while True:
         else:
             break  
 
+j=pull.json()
+
+time = datetime.datetime.now()
+a = time.strftime("%Y")
+b = time.strftime("%m")
+c = time.strftime("%d")    
+d = time.strftime("%I")
+e = time.strftime("%M")
+f = time.strftime("%p")
+
+t,opn,h,l,close,vol = [],[],[],[],[],[]
+
+for lx, value in j["Time Series (Daily)"].items():
+    t.append(lx)
+    
+    opn.append(float(value["1. open"]))
+
+    h.append(float(value["2. high"]))
+    
+    l.append(float(value["3. low"]))
+    
+    close.append(float(value["4. close"]))
+    
+    vol.append(float(value["5. volume"]))
+#Shoutout to THE @Chenmi1997
+print(" ")
+print("--------------------------------------------------- ")
+print(" ")
+print("Stock Ticker: " + ticker)
+print(" ")
+print("Program Run On: " + a + "-" + b + "-" + c + " " + d + ":" + e + " " + f)
+print(" ")
+print("...")
+print(" ")
+print("Now saving the requested information")
+print(" ")
+print("...")
+print(" ")
