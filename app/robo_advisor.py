@@ -122,6 +122,7 @@ print("")
 def dolval(valueinput):
     return "{0:,.2f}".format(valueinput)
 #Shoutout Professor Rossetti for the formatting here @s2t2
+
 recclose = (float(output.iloc[0]["Close"]))
 reclow = (float(min((output["Low"]))))
 rechigh = (float(max((output["High"]))))
@@ -131,6 +132,14 @@ llow = float(min((output["Low"])))
 hhigh = float(max((output["High"])))
 lbound = float(0.75)
 hbound = float(1.66)
-lbound2 = (lbound * cclose)
-hbound2 = (hbound * cclose)
+
+lb2 = (lbound * cclose)
+hb2 = (hbound * cclose)
+if llow < lb2 or hhigh > hb2:
+    recom = "DO NOT BUY"
+    logic = "This stock appears to be very volatile! Unless Jerome Powell is fooling around with interest rates again and causing market-wide turmoil, its best to stay away from this stock for now as it is probably not a bluechip stock!"
+else:
+    recom = "BUY"
+    logic = "This stock does not seem very volatile! You have a high probability of making a profit if you write calls and puts on this company!"
+
 
