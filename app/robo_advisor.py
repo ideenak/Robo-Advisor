@@ -142,4 +142,27 @@ else:
     recom = "BUY"
     logic = "This stock does not seem very volatile! You have a high probability of making a profit if you write calls and puts on this company!"
 
+print("LATEST DAILY CLOSING PRICE: $" + dolval(recclose))
+
+print("THE 100-DAY LOW IS : $" + dolval(reclow))
+print("THE 100-DAY HIGH IS: $" + dolval(rechigh))
+
+
+
+
+print("")
+
+print("Recommendation: " + recom)
+print("Reason for Recommendation: " + logic)
+
+print("")
+
+print("")
+
+print("Thank you for using The Bluechip Stock Picker!")
+
+print("--------------------------------------------------- ")
+
+
+
 
