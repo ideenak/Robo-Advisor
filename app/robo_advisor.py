@@ -131,4 +131,6 @@ llow = float(min((output["Low"])))
 hhigh = float(max((output["High"])))
 lbound = float(0.75)
 hbound = float(1.66)
+lbound2 = (lbound * cclose)
+hbound2 = (hbound * cclose)
 
