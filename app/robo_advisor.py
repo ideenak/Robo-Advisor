@@ -125,3 +125,7 @@ def dolval(valueinput):
 recclose = (float(output.iloc[0]["Close"]))
 reclow = (float(min((output["Low"]))))
 rechigh = (float(max((output["High"]))))
+
+cclose = float(output.iloc[0]["Close"])
+llow = float(min((output["Low"])))
+hhigh = float(max((output["High"])))
