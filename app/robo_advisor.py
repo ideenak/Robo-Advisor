@@ -79,3 +79,8 @@ print("Now saving the requested information")
 print(" ")
 print("...")
 print(" ")
+output = pnd.DataFrame(
+    {
+        "Time":t, "Open":opn, "High": h, "Low":l, "Close":close, "Volume": vol,
+    }
+)
