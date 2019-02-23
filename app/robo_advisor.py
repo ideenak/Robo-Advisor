@@ -129,3 +129,6 @@ rechigh = (float(max((output["High"]))))
 cclose = float(output.iloc[0]["Close"])
 llow = float(min((output["Low"])))
 hhigh = float(max((output["High"])))
+lbound = float(0.75)
+hbound = float(1.66)
+
