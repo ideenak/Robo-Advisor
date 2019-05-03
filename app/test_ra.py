@@ -6,7 +6,7 @@ import requests
 import pandas as pnd 
 from datetime import datetime
 
-
+#testing dollar value conversion
 def test_to_usd():
     result = to_usd(10)
     result1 = to_usd(1000)
@@ -17,15 +17,17 @@ def test_to_usd():
     assert result2 == "$ 57.33"
     assert result3 == "$ 0.01"
 
-
+#testing responses from API Key and csv reading
 def test_getresponse():
     ticker = "AAPL"
     apikey = str(os.environ.get("ALPHAVANTAGE_API_KEY"))
-    #pull1 = requests.get("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=" + ticker + "&apikey=" + apikey)
-
+    
     answer = get_response("AAPL", apikey)
 
     parsed_answer = json.loads(answer.text)
+    
+    
+    
     result = list(parsed_answer)
 
     assert result == ['Meta Data', 'Time Series (Daily)']
