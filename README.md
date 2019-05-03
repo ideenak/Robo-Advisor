@@ -12,16 +12,19 @@ Issues requests to the [AlphaVantage Stock Market API](https://www.alphavantage.
 
 ## Installation
 
-Fork this [starter project repository](https://github.com/prof-rossetti/stocks-app-starter-py) under your own control, then clone or download the resulting repository onto your computer. Then navigate there from the command line:
+1. Fork this repository: [starter project repository](https://github.com/prof-rossetti/stocks-app-starter-py) 
+2. Clone or download the repository locally
+3. Enter the following line into the command line
 
 ```sh
 cd robo-advisor-starter-py
 ```
 
-Use Anaconda to create and activate a new virtual environment, perhaps called "stocks-env". From inside the virtual environment, install package dependencies:
+Via Anaconda, create and activate a new virtual environment, perhaps called "stocks-env". From inside the virtual environment, install package dependencies:
 
 ```sh
 pip install requests python-dotenv
+pip install -r requirements.txt
 ```
 
 ## Setup
