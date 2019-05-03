@@ -42,5 +42,3 @@ Run the recommendation script:
 ```py
 python app/robo_advisor.py
 ```
-
-## [License](/LICENSE.md)
