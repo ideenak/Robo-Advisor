@@ -4,6 +4,7 @@ Allows users to use the AlphaVantage API to select stocks and receive recommenda
 ## Prerequisites
 
 -Python 3.7.
+
 -pip
 
 ## Installation 
