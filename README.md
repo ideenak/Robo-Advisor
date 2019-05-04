@@ -1,44 +1,43 @@
-# "Robo Advisor" Project - Starter Repository
-
-A starter repository for the ["Robo Advisor" project](https://github.com/prof-rossetti/georgetown-opim-243-201901/blob/master/projects/robo-advisor.md).
-
-Issues requests to the [AlphaVantage Stock Market API](https://www.alphavantage.co/) in order to provide automated stock or cryptocurrency trading recommendations.
+# Robo-Advisor Project
+Allows users to use the AlphaVantage API to select stocks and receive recommendations on whether or not they should purchase them. 
 
 ## Prerequisites
 
-  + Anaconda 3.7
-  + Python 3.7
-  + Pip
+-Python 3.7.
+-pip
 
-## Installation
+## Installation 
 
-1. Fork this repository: [starter project repository](https://github.com/prof-rossetti/stocks-app-starter-py) 
-2. Clone or download the repository locally
-3. Enter the following line into the command line
+First, clone or download this repository locally. Then install the packages in the requirements.txt file via the following line in the command line:
 
-```sh
-cd robo-advisor-starter-py
 ```
-
-Via Anaconda, create and activate a new virtual environment, perhaps called "stocks-env". From inside the virtual environment, install package dependencies:
-
-```sh
-pip install requests python-dotenv
 pip install -r requirements.txt
 ```
 
-## Setup
-
-Before using or developing this application, take a moment to [obtain an AlphaVantage API Key](https://www.alphavantage.co/support/#api-key) (e.g. "abc123").
-
-After obtaining an API Key, create a new file called ".env", and update the contents of the ".env" file to specify your real API Key.
-
-Don't worry, the ".env" has already been [ignored](/.gitignore) from version control for you!
-
 ## Usage
 
-Run the recommendation script:
+1. Procure an API key from https://www.alphavantage.co/
 
-```py
+
+2. create a .env file and add your API key to it as follows:
+```
+ALPHAVANTAGE_API_KEY= "Your Key"
+```
+
+3. Run the program:
+
+```
 python app/robo_advisor.py
 ```
+
+4. Follow the on-screen instructions.
+
+## Tests
+
+In order to perform a test, enter the following line into the command line:
+
+```sh
+pytest
+```
+
+
